@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Balises meta pour le référencement SEO -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      description="Garage V.Parrot, vente de véhicules neufs ou d'occasion, entretien et réparation auto. Retrouvez l'ensemble de nos prestations et de nos véhicules à vendre."
+    />
+    <meta
+      property="og:title"
+      content="Avec une expérience de plus de 30 ans le Garage Mendonça est votre spécialiste de la mécanique, la carrosserie et la vente"
+    />
+    <meta
+      property="og:description"
+      content="Le Garage Auto V.Parrot réalise la vente et l'achat de voitures. Découvrez une sélection de véhicules neufs et d'occasion disponibles à petit prix. Notre garage s'occupe également de réparer votre carrosserie. Votre voiture est tombée en panne ? Confiez-la à notre spécialiste ! Il..."
+    />
+    <meta property="og:type" content="website" />
+    <!-- N'oublie pas de changer avec ton nom/prénom ou supprimer si tu ne veux pas etre affiché-->
+    <meta author="Mickaël Cornelli" />
+    <!-- Titre du site -->
+    <title>Garage V. Parrot</title>
+    <!-- import d'une police spécifique Barlow-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow:400,600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Liaison avec le CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Ajoute un favicon-->
+    <link rel="icon" href="assets/img/favicon.ico" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <a href="/">
+          <img src="assets/img/logo.png" alt="Garage V. Parrot Logo" />
+        </a>
+      </div>
+      <!-- Nav bar -->
+      <nav>
+        <ul>
+          <li><a href="#services">Nos Services</a></li>
+          <li><a href="#cars">Voitures d'Occasion</a></li>
+          <li><a href="#contact-form">Contact</a></li>
+          <li><a href="#login">Se connecter</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- L'entreprise-->
+    <section id="welcome">
+      <h1>Garage V. Parrot</h1>
+      <p class="subtitle">Bienvenue à votre oasis automobile de confiance !</p>
+
+      <p>
+        Imaginez un lieu où vos soucis automobiles se transforment en
+        tranquillité d'esprit. Chez Garage V.Parrot, nous sommes bien plus qu'un
+        simple garage. Nous sommes votre partenaire dévoué dans le monde de
+        l'automobile, prêts à résoudre tous vos problèmes, des égratignures de
+        carrosserie aux révisions nécessaires pour maintenir votre véhicule en
+        parfait état de marche.
+      </p>
+
+      <p>
+        Nos experts en mécanique sont les magiciens de la route, capables de
+        redonner vie à votre voiture avec une touche de savoir-faire inégalé.
+        Mais ce n'est pas tout - nous sommes également vos meilleurs conseillers
+        pour l'achat de votre prochain véhicule, garantissant que vous repartiez
+        avec une voiture qui correspond parfaitement à vos besoins et à votre
+        style de vie.
+      </p>
+      <p>
+        La carrosserie n'est pas qu'une affaire de peinture. Chez Garage
+        V.Parrot, c'est une forme d'art, où chaque bosse et chaque éraflure est
+        soigneusement effacée pour révéler la beauté cachée de votre véhicule.
+        Nous redonnons vie à votre voiture avec une précision qui dépasse les
+        attentes.
+      </p>
+      <p>
+        Les révisions périodiques sont essentielles pour la longévité de votre
+        véhicule. Chez nous, elles ne sont pas seulement une tâche, mais une
+        opportunité de prendre soin de votre voiture et de prévenir les
+        problèmes futurs. Avec notre expertise, vous pouvez rouler en toute
+        tranquillité.
+      </p>
+      <p>
+        Chez Garage V.Parrot, nous ne sommes pas seulement dans le business de
+        l'automobile, nous sommes dans le business de la satisfaction client.
+        Nous sommes là pour vous, prêts à relever tous les défis et à faire
+        briller votre expérience automobile. Venez nous voir et découvrez par
+        vous-même pourquoi nous sommes votre solution fiable pour tous les
+        besoins automobiles.
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <div class="service-card" id="mecanique" onclick="scrollToService('contact-form')">
+        <h3>Mécanique</h3>
+        <p>
+          Réparations générales, entretien des freins, changement de courroies,
+          diagnostics moteur et plus encore pour garder votre voiture en parfait
+          état.
+        </p>
+        </a>
+      </div>
+      <div class="service-card" id="carrosserie" onclick="scrollToService('contact-form')">
+        <h3>Carrosserie</h3>
+        <p>
+          Peinture et retouche, réparation des dégâts de collision, restauration
+          de carrosserie pour que votre véhicule retrouve son éclat d'origine.
+        </p>
+      </div>
+      <div class="service-card" id="revision" onclick="scrollToService('contact-form')">
+        <h3>Révision</h3>
+        <p>
+          Révisions annuelles ou sur mesure, contrôles techniques, changement
+          d'huile et vérifications diverses pour assurer la sécurité et la
+          performance.
+        </p>
+      </div>
+    </section>
+
+    <!-- barre de recherche-->
+    <div id="filter-bar" class="filter-bar-hidden">
+      <!-- Ajoutez les éléments de filtre ici-->
+      <select id="filter-make">
+        <option value="">Marque</option>
+        <option value="audi">Audi</option>
+        <option value="bmw">BMW</option>
+        <option value="bmw">DS</option>
+        <option value="bmw">Land Rover</option>
+        <option value="bmw">Mercedes</option>
+        <option value="bmw">Toyota</option>
+        <!-- Autres marques -->
+      </select>
+      <select id="filter-price">
+        <option value="">Prix</option>
+        <option value="1">Moins de 20 000€</option>
+        <option value="2">Entre 20 000€ et 40 000€</option>
+        <option value="3">Entre 40 000€ et 60 000€</option>
+        <option value="4">Entre 60 000€ et 80 000€</option>
+        <option value="4">Entre 80 000€ et 100 000€</option>
+        <option value="5">Plus de 100 000€</option>
+        <!-- Autres options de prix -->
+      </select>
+      <select id="filter-fuel">
+        <option value="">Carburant</option>
+        <option value="essence">Essence</option>
+        <option value="diesel">Diesel</option>
+        <option value="hybride">Hybride</option>
+        <option value="electrique">Electrique</option>
+        <!-- Autres types de carburants -->
+      </select>
+      <select id="filter-km">
+        <option value="">Kilométrage</option>
+        <option value="1">Moins de 10 000 km</option>
+        <option value="2">Entre 10 000 et 50 000 km</option>
+        <option value="3">Entre 50 000 et 100 000 km</option>
+        <option value="4">Entre 100 000 et 150 000 km</option>
+        <option value="5">Plus de 150 000 km</option>
+        <!-- Autres options de kilométrage -->
+      </select>
+      <select id="filter-year">
+        <option value="">Année</option>
+        <option value="1">2015</option>
+        <option value="2">2016</option>
+        <option value="3">2017</option>
+        <option value="4">2018</option>
+        <option value="5">2019</option>
+        <option value="6">2020</option>
+        <option value="7">2021</option>
+        <option value="8">2022</option>
+        <option value="9">2023</option>
+        <option value="10">2024</option>
+        <!-- Autres options de kilométrage -->
+      </select>
+    </div>
+<!-- Liste de véhicules -->
+    <section id="cars">
+      <h2>Nos véhicules à vendre</h2>
+      <div class="car-cards">
+        <div class="car-card">
+          <img src="assets/img/cars/1.png" alt="Voiture Modèle 1" />
+          <div class="car-info">
+            <div class="car-header">
+              <h3>Mercedes AMG</h3>
+              <span>102 000€</span>
+            </div>
+            <div class="car-details">
+              <span>12 000 km</span>
+              <span>Auto</span>
+              <span>2023</span>
+              <span>Essence</span>
+            </div>
+            <button class="show-details">Plus d'infos</button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <img src="assets/img/cars/2.png" alt="Voiture Modèle 2" />
+          <div class="car-info">
+            <div class="car-header">
+              <h3>Audi Jeep Q3 grise</h3>
+              <span>36 990€</span>
+            </div>
+            <div class="car-details">
+              <span>144 000 km</span>
+              <span>Auto</span>
+              <span>2023</span>
+              <span>Hybride</span>
+            </div>
+            <button class="show-details">Plus d'infos</button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <img src="assets/img/cars/3.png" alt="Voiture Modèle 3" />
+          <div class="car-info">
+            <div class="car-header">
+              <h3>Land Rover orange</h3>
+              <span>51 600€</span>
+            </div>
+            <div class="car-details">
+              <span>98 560 km</span>
+              <span>Auto</span>
+              <span>2021</span>
+              <span>Diesel</span>
+            </div>
+            <button class="show-details">Plus d'infos</button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <img src="assets/img/cars/4.png" alt="Voiture Modèle 4" />
+          <div class="car-info">
+            <div class="car-header">
+              <h3>BMW black series</h3>
+              <span>41 600€</span>
+            </div>
+            <div class="car-details">
+              <span>35 230 km</span>
+              <span>Auto</span>
+              <span>2022</span>
+              <span>Diesel</span>
+            </div>
+            <button class="show-details">Plus d'infos</button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <img src="assets/img/cars/5.png" alt="Voiture Modèle 5" />
+          <div class="car-info">
+            <div class="car-header">
+              <h3>DS5 crossback</h3>
+              <span>27 490€</span>
+            </div>
+            <div class="car-details">
+              <span>78 013 km</span>
+              <span>Auto</span>
+              <span>2018</span>
+              <span>Diesel</span>
+            </div>
+            <button class="show-details">Plus d'infos</button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <img src="assets/img/cars/6.png" alt="Voiture Modèle 6" />
+          <div class="car-info">
+            <div class="car-header">
+              <h3>Mercedes GLS</h3>
+              <span>96 938€</span>
+            </div>
+            <div class="car-details">
+              <span>1 206 km</span>
+              <span>Auto</span>
+              <span>2022</span>
+              <span>Hybrid</span>
+            </div>
+            <button class="show-details">Plus d'infos</button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <img src="assets/img/cars/7.png" alt="Voiture Modèle 7" />
+          <div class="car-info">
+            <div class="car-header">
+              <h3>BMW X1</h3>
+              <span>12 000€</span>
+            </div>
+            <div class="car-details">
+              <span>187 000km</span>
+              <span>Manuelle</span>
+              <span>2018</span>
+              <span>Diesel</span>
+            </div>
+            <button class="show-details">Plus d'infos</button>
+          </div>
+        </div>
+
+        <div class="car-card">
+          <img src="assets/img/cars/8.png" alt="Voiture Modèle 8" />
+          <div class="car-info">
+            <div class="car-header">
+              <h3>Toyota Yaris</h3>
+              <span>5 938€</span>
+            </div>
+            <div class="car-details">
+              <span>129 000 km</span>
+              <span>Manuelle</span>
+              <span>2015</span>
+              <span>Diesel</span>
+            </div>
+            <button class="show-details">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Présentation de l'equipe-->
+    <section id="team">
+      <h2>Notre Équipe</h2>
+      <div class="team-container">
+        <div class="team-member">
+          <img src="assets/img/team/1.webp" alt="Vincent Parrot" />
+          <h3>Vincent Parrot</h3>
+          <p>Directeur</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/2.webp" alt="Laura Martel" />
+          <h3>Laura Martel</h3>
+          <p>Mécanicienne</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/3.webp" alt="Nicolas Bertrand" />
+          <h3>Nicolas Bertrand</h3>
+          <p>Mécanicien</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/4.webp" alt="Sophie Durand" />
+          <h3>Sophie Durand</h3>
+          <p>Secrétaire</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/6.webp" alt="Etienne Poirret" />
+          <h3>Etienne Poirret</h3>
+          <p>Mécanicien</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/5.webp" alt="Franck Senior" />
+          <h3>Franck Senior</h3>
+          <p>Responsable mécanique</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/7.webp" alt="Maxime Legrand" />
+          <h3>Maxime Legrand</h3>
+          <p>Commercial</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacter l'atelier -->
+    <section id="contact-form">
+      <h2>Contactez l'Atelier</h2>
+      <form action="submit-form.php" method="POST">
+        <div class="form-group">
+          <label for="firstName">Prénom:</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Nom:</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Adresse Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Numéro de Téléphone:</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+        <div class="form-group">
+          <label for="message">Votre Message:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <input type="hidden" id="subject" name="subject" />
+        <button type="submit" class="submit-btn">Envoyer</button>
+      </form>
+    </section>
+
+    <!-- Horaires -->
+    <section id="hours">
+      <div class="container">
+        <h2>Horaires d'ouverture</h2>
+        <p>Lundi au vendredi : 8h45 à 12h - 14h à 18h</p>
+        <p>Samedi : 8h45 à 12h</p>
+        <p>Dimanche : Fermé</p>
+      </div>
+    </section>
+
+    <!-- Avis clients -->
+    <section id="testimonials">
+      <h2>Avis de nos clients</h2>
+      <div class="testimonials-container">
+        <div class="testimonial">
+          <img src="assets/img/reviews/1.jpg" alt="Lucas" class="testimonial-img" />
+          <p>
+            "Service rapide et efficace. Très content de l'expérience!" <br/>Lucas
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="assets/img/reviews/2.jpg" alt="Sophie" class="testimonial-img" />
+          <p>
+            "Des professionnels à l'écoute et des prix abordables." <br/>Sophie
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="assets/img/reviews/3.jpg" alt="Hugo" class="testimonial-img" />
+          <br>
+            "J'ai trouvé la voiture d'occasion de mes rêves à un prix
+            incroyable." </br> Hugo
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="assets/img/reviews/4.jpg" alt="Emma" class="testimonial-img" />
+          <br>
+            "Qualité exceptionnelle et personnel amical. Recommandé!" </br> Emma
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="assets/img/reviews/5.jpg" alt="Alexandre" class="testimonial-img" />
+          <p>"Meilleur garage de la région, sans aucun doute." </br> Alexandre</p>
+        </div>
+        <div class="testimonial">
+          <img src="assets/img/reviews/6.jpg" alt="Sarah" class="testimonial-img" />
+          <p>
+            "Ils ont réparé mon véhicule rapidement, avec un excellent service
+            après-vente." </br> Sarah
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="assets/img/reviews/7.jpg" alt="Maxime" class="testimonial-img" />
+          <p>
+            "Très satisfait du travail réalisé sur ma voiture. Merci!" </br> Maxime
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="assets/img/reviews/8.jpg" alt="Léa" class="testimonial-img" />
+          <p>
+            "Un service client hors pair et des réponses claires à mes
+            questions." </br> Léa
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="assets/img/reviews/9.jpg" alt="Thomas" class="testimonial-img" />
+          <p>"Fiable, honnête et professionnel. Je reviendrai!" </br> Thomas</p>
+        </div>
+        <div class="testimonial">
+          <img src="assets/img/reviews/10.jpg" alt="Camille" class="testimonial-img" />
+          <p>
+            "Une équipe experte et des services de qualité supérieure." </br>
+            Camille
+          </p>
+        </div>
+      </div>
+
+      <h3>Laissez votre témoignage</h3>
+      <form id="testimonial-form">
+        <input type="text" name="name" placeholder="Votre nom" required />
+        <textarea
+          name="comment"
+          placeholder="Votre commentaire"
+          required
+        ></textarea>
+        <label>Note : </label>
+        <select name="rating">
+          <option value="1" selected>⭐⭐⭐⭐⭐</option>
+          <option value="2">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐</option>
+          <option value="5">⭐</option>
+        </select>
+        <button type="submit" class="submit-btn">Envoyer le témoignage</button>
+      </form>
+    </section>
+
+    <!-- Réseaux sociaux-->
+    <section id="social-contact">
+      <h2>Contactez-Nous</h2>
+      <p>Téléphone : +33 6 23 45 67 89</p>
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/GarageVParrot"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <img src="assets/img/social/facebook.png" alt="Facebook" />
+        </a>
+
+        <a
+          href="https://www.twitter.com/GarageVParrot"
+          target="_blank"
+          aria-label="Twitter"
+        >
+          <img src="assets/img/social/twitter.png" alt="Twitter" />
+        </a>
+
+        <a
+          href="https://www.instagram.com/GarageVParrot"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <img src="assets/img/social/instagram.png" alt="Instagram" />
+        </a>
+
+        <a
+          href="https://www.youtube.com/GarageVParrot"
+          target="_blank"
+          aria-label="Youtube"
+        >
+          <img src="assets/img/social/youtube.png" alt="Youtube" />
+        </a>
+
+        <a
+          target="_blank"
+          aria-label="Email"
+          href="mailto:garagevparrot@gmail.com"
+        >
+          <img src="assets/img/social/mail.png" alt="Email" />
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2024 Garage V. Parrot. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Modal de login-->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Connexion</h2>
+        <form id="loginForm">
+          <label for="email">Email :</label>
+          <input type="email" id="email" required />
+          <label for="password">Mot de passe :</label>
+          <input type="password" id="password" required />
+          <button type="submit">Se connecter</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal détails véhicule-->
+    <div id="modalCar" class="modal-car">
+      <div class="modal-car-content">
+        <div onclick="closeCarModal()" class="modal-car-close">
+          <span>&times;</span>
+        </div>
+          <h2 id="modal-car-title">Détails du véhicule</h2>
+          <div id="modal-car-details">
+              <!-- Les détails du véhicule seront affichés ici -->
+          </div>
+      </div>
+      <div class="modal-car-overlay"></div> 
+  </div>
+
+    <!-- Jinggle V.parrot - changer par le son du dossier audio de votre choix-->
+    <audio id="myAudio" src="audio/Garage_V_Parrot_pop.mp3" hidden></audio>
+
+    <!-- Déclenche un script javascript-->
+    <script src="js/main.js"></script>
+    <script src="js/carsDetails.js"></script>
+  </body>
+</html>
